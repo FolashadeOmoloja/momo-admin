@@ -18,7 +18,7 @@ const DashboardContainer = ({
       />
       <div
         className={`flex-1 ml-0 ${
-          isCollapsed ? "md:ml-20" : "md:ml-72"
+          isCollapsed ? "lg:ml-20" : "lg:ml-72"
         } min-h-screen bg-[#F2F2F2] p-10 transition-all duration-300`}
       >
         {children}

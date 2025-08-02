@@ -44,7 +44,7 @@ NGTB15MAR2026,16.0,180,10000000,2025-03-15,2025-09-11,500,25000000000,2025-03-10
   }, []);
 
   return (
-    <div className="flex items-center justify-between w-full py-4 px-0">
+    <div className="flex lg:items-center justify-between w-full py-4 px-0 max-lg:flex-col gap-y-4">
       {/* Left side - Title and Date */}
       <div>
         <h1 className="text-2xl font-bold text-[#004F71]">

@@ -75,17 +75,16 @@ export default function BulkUploadNTBModal({
       status: "Valid",
     },
     {
-      title: "INVALID_CODE",
-      rate: "abc", // Error: Invalid rate
-      tenor: "90",
-      minInvestment: "1000000",
-      startDate: "2025-04-01",
-      maturityDate: "2025-06-30",
-      totalUnits: "200",
-      offerSize: "5000000000",
-      investorsDeadline: "2025-03-25",
-      status: "Error",
-      errors: ["Invalid rate format", "NTB code format incorrect"],
+      title: "NGTB15MAR2026",
+      rate: "16.0",
+      tenor: "180",
+      minInvestment: "10000000",
+      startDate: "2025-03-15",
+      maturityDate: "2025-09-11",
+      totalUnits: "500",
+      offerSize: "25000000000",
+      investorsDeadline: "2025-03-10",
+      status: "Valid",
     },
   ];
 

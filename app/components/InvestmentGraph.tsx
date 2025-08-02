@@ -57,7 +57,7 @@ const InvestmentGraph = () => {
   return (
     <div className="w-full bg-white rounded-2xl py-4 px-6 shadow-sm border border-gray-100">
       {/* Header */}
-      <div className="flex items-start justify-between mb-8">
+      <div className="flex items-start justify-between mb-8 max-sm:flex-col gap-y-4">
         <div>
           <h3 className="text-lg font-semibold text-[#004F71] mb-1">
             Investment Volume Over Time

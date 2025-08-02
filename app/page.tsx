@@ -68,7 +68,7 @@ export default function Dashboard() {
         <UserHeader />
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-6">
         {statsData.map((stat, index) => (
           <StatsCard
             key={index}
@@ -81,14 +81,14 @@ export default function Dashboard() {
         ))}
       </div>
       {!closeAlert && <Alert handleClose={() => setCloseAlert(true)} />}
-      <div className="flex my-6 gap-6">
+      <div className="flex my-6 gap-6 max-xl:flex-col">
         <InvestmentGraph />
         <NTBStatusDistribution />
       </div>
-      <div className="flex gap-5">
-        <div className="bg-white p-6 rounded-xl shadow">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-[#004F71]">
+      <div className="flex gap-x-4 gap-y-6 max-[1300px]:flex-col">
+        <div className="bg-white p-6 rounded-xl shadow basis-1/2">
+          <div className="flex items-center justify-between mb-4 w-full ">
+            <h3 className="text-lg font-semibold text-[#004F71] ">
               Upcoming Maturities
             </h3>
             <div className="p-2 bg-[#FFCC00]/90 rounded-lg shadow-sm">
@@ -97,7 +97,7 @@ export default function Dashboard() {
           </div>
           <DynamicTable columns={maturityColumns} data={upcomingMaturities} />
         </div>
-        <div className="bg-white p-6 rounded-xl shadow">
+        <div className="bg-white p-6 rounded-xl shadow basis-1/2">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-[#004F71]">
               Low Uptake NTBs

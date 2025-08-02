@@ -110,7 +110,7 @@ const PreLiquidationRequests = ({ ntbDet }: any) => {
     <div className="my-16">
       {/* Header */}
       <div className="bg-white rounded-2xl py-4 px-6 shadow">
-        <div className="flex items-center justify-between">
+        <div className="flex md:items-center justify-between max-md:flex-col gap-y-4">
           <div>
             <h1 className="text-2xl font-bold text-[#004F71]">
               Pre-liquidation Requests

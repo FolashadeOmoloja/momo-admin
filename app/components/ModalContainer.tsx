@@ -56,7 +56,7 @@ const ModalContainer = ({
         </div>
 
         {/* Content */}
-        <div className="p-12 bg-white ">{children}</div>
+        <div className="md:p-12 p-6 bg-white ">{children}</div>
       </div>
     </div>
   );

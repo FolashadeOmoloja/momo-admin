@@ -61,7 +61,7 @@ const NTBListingsPage = () => {
         />
         {/* Search and Filters */}
         <div className="mt-9 mb-6">
-          <div className="flex flex-col lg:flex-row justify-between">
+          <div className="flex flex-col gap-y-4 lg:flex-row  justify-between">
             {/* Search Bar */}
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#004F71] h-4 w-4" />

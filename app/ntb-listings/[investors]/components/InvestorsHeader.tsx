@@ -10,7 +10,7 @@ const InvestorHeader = ({
   ntbData: any;
 }) => {
   return (
-    <div className="flex items-center justify-between w-full py-4 px-6 bg-white rounded-2xl shadow">
+    <div className="flex md:items-center justify-between w-full py-4 px-6 bg-white rounded-2xl shadow max-md:flex-col gap-y-4">
       {/* Left side - Title and Date */}
       <div>
         <h1 className="text-2xl font-bold text-[#004F71]">

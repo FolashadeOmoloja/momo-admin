@@ -209,7 +209,7 @@ const SettlementMaturityTracker: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex gap-6 mx-6 mt-6">
+        <div className="flex gap-6 mt-6 flex-wrap max-lg:flex-col">
           {/* Sidebar */}
           <div className="w-76 bg-white rounded-2xl p-3 h-fit">
             {sidebarItems.map((item) => {
@@ -237,7 +237,7 @@ const SettlementMaturityTracker: React.FC = () => {
           <div className="flex-1">
             {activeTab === "settlements" && (
               <div className="bg-white rounded-2xl overflow-hidden">
-                <div className="bg-[#004f71] text-white p-6">
+                <div className="bg-[#004f71] text-white lg:p-6 p-4">
                   <div className="flex items-center justify-between mb-4">
                     <h2 className="text-xl font-bold flex items-center gap-3">
                       <TrendingUp className="w-5 h-5" />
@@ -246,7 +246,7 @@ const SettlementMaturityTracker: React.FC = () => {
                   </div>
 
                   {/* Filters */}
-                  <div className="flex gap-4 items-center">
+                  <div className="flex gap-4 items-center flex-wrap">
                     <div className="flex gap-2">
                       <button
                         onClick={() => setSettlementFilter("all")}
@@ -295,20 +295,20 @@ const SettlementMaturityTracker: React.FC = () => {
                 </div>
 
                 {/* Settlement Cards */}
-                <div className="p-6 space-y-4">
+                <div className="lg:p-6 space-y-4 p-4">
                   {filteredSettlements.map((settlement) => (
                     <div
                       key={settlement.id}
-                      className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
+                      className="border border-gray-200 rounded-xl lg:p-6 p-4 hover:shadow-lg transition-shadow"
                     >
-                      <div className="flex items-center justify-between mb-4">
+                      <div className="flex  sm:items-center max-sm:flex-col justify-between mb-4">
                         <div>
                           <h3 className="text-xl font-bold text-[#004f71]">
                             {settlement.ntbName}
                           </h3>
                           <p className="text-gray-600">{settlement.ntbId}</p>
                         </div>
-                        <div className="text-right">
+                        <div className="sm:text-right">
                           <div className="text-lg font-bold text-[#004f71]">
                             {formatCurrency(settlement.amount)}
                           </div>
@@ -318,7 +318,7 @@ const SettlementMaturityTracker: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-4 gap-4 mb-4">
+                      <div className="grid grid-cols-3 max-lg:grid-cols-2 gap-4 mb-4">
                         <div>
                           <label className="text-sm text-gray-600">
                             Settlement Date
@@ -365,7 +365,7 @@ const SettlementMaturityTracker: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 flex-wrap">
                         {settlement.status === "pending" && (
                           <button
                             onClick={() => markAsSettled(settlement.id)}
@@ -390,7 +390,7 @@ const SettlementMaturityTracker: React.FC = () => {
 
             {activeTab === "maturity" && (
               <div className="bg-white rounded-2xl overflow-hidden">
-                <div className="bg-[#004f71] text-white p-6">
+                <div className="bg-[#004f71] text-white lg:p-6 p-4">
                   <div className="flex items-center justify-between mb-4">
                     <h2 className="text-xl font-bold flex items-center gap-3">
                       <Clock className="w-6 h-6" />
@@ -446,11 +446,11 @@ const SettlementMaturityTracker: React.FC = () => {
                 </div>
 
                 {/* Maturity Cards */}
-                <div className="p-6 space-y-4">
+                <div className="lg:p-6 space-y-4 p-4">
                   {filteredMaturity.map((item) => (
                     <div
                       key={item.id}
-                      className={`border rounded-xl p-6 hover:shadow-lg transition-shadow ${
+                      className={`border rounded-xl lg:p-6 p-4 hover:shadow-lg transition-shadow ${
                         item.daysToMaturity < 0
                           ? "border-red-200 bg-red-50"
                           : item.daysToMaturity <= 7
@@ -458,7 +458,7 @@ const SettlementMaturityTracker: React.FC = () => {
                           : "border-gray-200"
                       }`}
                     >
-                      <div className="flex items-center justify-between mb-4">
+                      <div className="flex sm:items-center max-sm:flex-col justify-between mb-4">
                         <div>
                           <h3 className="text-xl font-bold text-[#004f71]">
                             {item.ntbName}
@@ -471,7 +471,7 @@ const SettlementMaturityTracker: React.FC = () => {
                             </span>
                           )}
                         </div>
-                        <div className="text-right">
+                        <div className="sm:text-right max-sm:mt-4">
                           <div className="text-lg font-bold text-[#004f71]">
                             {formatCurrency(item.totalAmount)}
                           </div>
@@ -484,7 +484,7 @@ const SettlementMaturityTracker: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-4 gap-4 mb-4">
+                      <div className="grid grid-cols-3 max-lg:grid-cols-2 gap-4 mb-4">
                         <div>
                           <label className="text-sm text-gray-600">
                             Maturity Date
@@ -530,7 +530,7 @@ const SettlementMaturityTracker: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 flex-wrap">
                         <button
                           onClick={() => sendReminder(item.id)}
                           className="bg-[#004f71] text-sm text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#003a5a] transition-colors flex items-center gap-2"

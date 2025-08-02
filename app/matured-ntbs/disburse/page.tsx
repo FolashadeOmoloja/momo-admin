@@ -239,7 +239,7 @@ const DisbursementPage = () => {
         </div>
         <div className="my-8">
           <div className=" mb-6">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 gap-y-4">
               {/* Search Bar */}
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#004F71] h-4 w-4" />
@@ -267,7 +267,7 @@ const DisbursementPage = () => {
                 Icon={Filter}
               />
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap">
               <DashboardBtn
                 cta="Auto Disburse All Pending"
                 variant="yellow"
@@ -298,7 +298,7 @@ const DisbursementPage = () => {
           {/* Controls Section */}
 
           {/* Disbursement Table */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-screen">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-[#005377] text-white">
@@ -412,8 +412,8 @@ const DisbursementPage = () => {
             </div>
 
             {/* Summary Bar */}
-            <div className="bg-[#005377] text-white p-6 flex justify-between items-center">
-              <div className="flex gap-8">
+            <div className="bg-[#005377] text-white p-6 flex justify-between items-center flex-wrap gap-y-4">
+              <div className="flex gap-8 flex-wrap gap-y-4">
                 <div className="text-center">
                   <div className="text-[#FFCC00] text-2xl font-bold">
                     {formatCurrency(
